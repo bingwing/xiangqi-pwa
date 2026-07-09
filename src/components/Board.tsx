@@ -180,7 +180,7 @@ export function Board({
                   aria-label={piece ? `${piece.side === 'red' ? '红' : '黑'}${PIECE_TEXT[piece.side][piece.kind]}` : '空位'}
                   onClick={() => onPointClick(position)}
                 >
-                  {piece ? PIECE_TEXT[piece.side][piece.kind] : isTarget ? <span className="target-dot" /> : null}
+                  {piece ? <span className="piece-label">{PIECE_TEXT[piece.side][piece.kind]}</span> : isTarget ? <span className="target-dot" /> : null}
                 </button>
               );
             }),
@@ -201,7 +201,7 @@ export function Board({
                 />
               </svg>
               <span className={`moving-piece ${moveAnimation.piece.side}`}>
-                {PIECE_TEXT[moveAnimation.piece.side][moveAnimation.piece.kind]}
+                <span className="piece-label">{PIECE_TEXT[moveAnimation.piece.side][moveAnimation.piece.kind]}</span>
               </span>
               <span className="move-origin-pulse" />
               <span className="move-destination-pulse" />

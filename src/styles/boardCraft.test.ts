@@ -21,21 +21,22 @@ describe('crafted board styles', () => {
 
     expect(gridRule).toContain('--board-padding: clamp(24px, 5vw, 50px)');
     expect(gridRule).toContain('aspect-ratio: 8 / 9');
-    expect(gridRule).toContain('border: 7px solid #5b2d16');
-    expect(gridRule).toContain('repeating-linear-gradient(90deg');
-    expect(gridRule).toContain('inset 0 0 0 10px rgba(255, 226, 167, 0.48)');
-    expect(gridRule).toContain('inset 0 0 0 18px rgba(88, 43, 20, 0.92)');
+    expect(gridRule).toContain('border: 8px solid #6f3f1f');
+    expect(gridRule).toContain('radial-gradient(circle at 50% 46%');
+    expect(gridRule).toContain('repeating-linear-gradient(90deg, rgba(118, 68, 28, 0.045)');
+    expect(gridRule).toContain('inset 0 0 0 5px rgba(247, 194, 111, 0.58)');
+    expect(gridRule).toContain('inset 0 0 0 16px rgba(75, 42, 20, 0.9)');
     expect(playAreaRule).toContain('inset: var(--board-padding)');
     expect(playAreaRule).toContain('aspect-ratio: 8 / 9');
     expect(playAreaRule).toContain('container-type: inline-size');
     expect(playAreaRule).toContain('margin: auto');
     expect(linesRule).toContain('inset: 0');
     expect(linesRule).toContain('overflow: visible');
-    expect(boardLineRule).toContain('stroke: #2a170f');
-    expect(boardLineRule).toContain('stroke-width: 2.2px');
+    expect(boardLineRule).toContain('stroke: #3a2114');
+    expect(boardLineRule).toContain('stroke-width: 1.78px');
     expect(boardLineRule).toContain('vector-effect: non-scaling-stroke');
     expect(boardLineRule).toContain('shape-rendering: crispEdges');
-    expect(palaceRule).toContain('stroke-width: 2.8px');
+    expect(palaceRule).toContain('stroke-width: 2.05px');
     expect(riverRule).toContain('font-family: "STKaiti", "Kaiti SC"');
   });
 

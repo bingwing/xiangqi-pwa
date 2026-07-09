@@ -17,11 +17,12 @@ describe('board notice placement', () => {
     const selectionTipRule = cssRule('.board-selection-tip');
 
     expect(boardShellRule).toContain('grid-template-rows: auto auto minmax(0, 1fr)');
+    expect(boardShellRule).toContain('transform: translateY(-3svh)');
     expect(noticeRule).not.toContain('position: absolute');
     expect(noticeRule).not.toContain('transform: translateX(-50%)');
     expect(noticeRule).toContain('position: relative');
-    expect(noticeRule).toContain('min-height: 40px');
-    expect(selectionTipRule).toContain('min-height: 30px');
-    expect(selectionTipRule).toContain('background: rgba(255, 250, 236, 0.52)');
+    expect(noticeRule).toContain('min-height: 36px');
+    expect(selectionTipRule).toContain('min-height: 24px');
+    expect(selectionTipRule).toContain('background: rgba(255, 244, 217, 0.42)');
   });
 });

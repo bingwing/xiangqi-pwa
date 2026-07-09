@@ -26,7 +26,7 @@ describe('first screen layout', () => {
     expect(eyebrowRule).toContain('white-space: nowrap');
     expect(headingRule).toContain('font-size: clamp(1.7rem, 4.2vw, 3.05rem)');
     expect(headingRule).toContain('white-space: nowrap');
-    expect(boardGridRule).toContain('width: min(100%, 60vh, 760px)');
+    expect(boardGridRule).toContain('width: min(100%, 68svh, 760px)');
   });
 
   it('keeps mobile piece sizing tied to the board grid instead of viewport-only sizing', () => {

@@ -29,14 +29,20 @@ describe('comfortable board interactions', () => {
   it('makes AI movement easy to read without relying on board-covering text', () => {
     const aiPieceRule = cssRule('.move-animation.ai .moving-piece');
     const aiTrailRule = cssRule('.move-animation.ai .move-trail line');
+    const trailRule = cssRule('.move-trail line');
+    const lastMoveGuideRule = cssRule('.last-move-guide line');
     const aiPulseRule =
       css.match(
         /\.move-animation\.ai \.move-origin-pulse,\s*\.move-animation\.ai \.move-destination-pulse\s*\{(?<body>[^}]*)\}/,
       )?.groups?.body ?? '';
 
     expect(aiPieceRule).toContain('animation-duration: 2200ms');
-    expect(aiPieceRule).toContain('0 0 0 22px rgba(0, 103, 192, 0.28)');
-    expect(aiTrailRule).toContain('stroke-width: 3.8');
+    expect(aiPieceRule).toContain('0 0 0 18px rgba(255, 210, 120, 0.16)');
+    expect(trailRule).toContain('stroke: rgba(142, 91, 38, 0.46)');
+    expect(trailRule).toContain('stroke-width: 1.8');
+    expect(lastMoveGuideRule).toContain('stroke: rgba(142, 91, 38, 0.5)');
+    expect(lastMoveGuideRule).toContain('stroke-width: 1.25');
+    expect(aiTrailRule).toContain('stroke-width: 2.2');
     expect(aiPulseRule).toContain('border-width: 8px');
   });
 });
